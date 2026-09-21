@@ -6,26 +6,32 @@ const sortQuestions = (questions: { points: number; question: string; answer: st
 const pastQuestions: Question[] = sortQuestions([
     {
         points: 100,
-        question: 'What US state is the Land of Lincoln?',
-        answer: 'Illinois',
-    },
+        question: 'What holiday is March 17th?',
+        answer: 'St. Patrick\'s Day',
+    },//I was born on st. patricks day
     {
         points: 200,
         question:
-            'Which country\'s flag is this?',
-        imgSrc: "https://cdn.britannica.com/34/4034-050-91EE1BCF/Flag-Myanmar.jpg",
-        answer: 'Myanmar',
+            'Which sport has beam, bars, and floor events?',
+        
+        answer: 'Gymnastics',
+        //i did gymnastics growing up for 7 years
     },
     {
         points: 300,
         question:
-            'What Ivy League school has the highest Native American enrollment (a whoppping 1%)?',
-        answer: 'Dartmouth',
+            'What is the only country flag with no blue, red, or white?',
+        answer: 'Jamaica',
+        imgSrc: "flag.jpeg",
+        //i am half jamaican
+        //HOW TO MAKE IMAGE SHOW UP IN THE ANSWER SECTION OF THE QUESTION CARD?
     },
     {
         points: 400,
-        question: 'Who wrote the Critique of Pure Reason?',
-        answer: 'Immanuel Kant',
+        question: 'This is a view from what national park in the United States?',
+        imgSrc: 'half-dome-from-clouds-rest-500w.jpg',
+        answer: 'Yosemite',
+        //i hiked clouds rest in yosemite this summer
     }
 ]);
 
@@ -34,55 +40,79 @@ const presentQuestions: Question[] =
         {
             points: 400,
             question:
-                'This is Donu, a character from which video game?',
-            imgSrc: '/donu-gif.gif',
-            answer: 'Slay the Spire',
+                'What is the oldest pizzeria in the United States?',
+            imgSrc: 'lombaris-pizza.jpg',
+            answer: 'Lombardi\'s',
+            //my mom has been goin to lombardi's for like 30 years and we go all the time
         },
         {
             points: 100,
             question:
-                'Tahini is made from which seed?',
-            imgSrc: 'https://www.aforkstale.com/wp-content/uploads/how-to-make-homemade-tahini-1200-x-1200.jpg',
-            answer: 'Sesame',
+                'A wheel is used for what kind of art?',
+            answer: 'Pottery',
+            //i love pottery
         },
         {
             points: 200,
-            question: 'What programming language is the below code?',
-            imgSrc: '/programming_language.png',
-            answer: 'Javascript',
+            question: 'This is a photo of what breed of dog?',
+            imgSrc: 'IMG_4946.jpeg',
+            answer: 'Poodle',
+            //i have the cutest dog inthe world and he is a poodle
         },
         {
             points: 300,
             question:
-                'This country is home to the Dolomites, which are a mountain range that has historical \'via ferratas\', iron cables and rungs, to aid traversing the peaks?',
+                'Janja Garnbret is the most decorated athlete in which sport?',
             imgSrc:
-                "https://laguidalpina.it/cdn/shop/products/ferrata-marmolada-cresta-ovest-Cristiano-Gregnanin-Guida-Alpina-Certificata-Dolomiti-5.jpg?v=1738870778",
-            answer: 'Italy',
+                "janja-image.jpg",
+            answer: 'Climbing',
+            //I do comp climbing a lot and Janja is a huge inspiration to me
         }
     ]);
 const futureQuestions: Question[] = sortQuestions([
     {
         points: 100,
         question:
-            'This type of 2D drawing allows you to see the sides of a 3D object at the same scale.',
-        imgSrc:
-            "https://static.mathigon.org/cms/a8141a111490d026fa6578a4933d1d47.png",
-        answer: 'Isometric',
-    }
+            'what is the capital of Utah?',
+        answer: 'Salt Lake City',
+        //I climbed at USAC nationals in salt lake last year and hope to gpo again this year
+    },
+     {
+            points: 200,
+            question: 'What sport is this ball used in?',
+            imgSrc: 'rugby-ball-images.jpg',
+            answer: 'Rugby',
+            //im doing rugby in the spring
+        },
+          {
+            points: 300,
+            question:
+                'What NYC based dance group is know for their high kicks?',
+            answer: 'Rockettes',
+            //the choir that I sing with is doing a perfromence with the rockettes at christmas
+        },
+          {
+            points: 400,
+            question:
+                'What island country has no sky diving age requirement?',
+            imgSrc: 'new-zealand.jpg',
+            answer: 'New Zealand',
+            // My sister is going to australia for her grad gift and I will convince my parents to let me go skydiving in new zealand
+        }
 ]);
 
 
 const categories = [
     {
-        title: 'Ms Feng\'s Past',
+        title: 'Samira\'s Past',
         questions: pastQuestions
     },
     {
-        title: `Ms. Feng's Present`,
+        title: `Samira's Present`,
         questions: presentQuestions
     },
     {
-        title: "Ms. Feng's Future",
+        title: "Samira's Future",
         questions: futureQuestions
     }
 ];
