@@ -188,7 +188,7 @@
 				Correct Answer: {selectedQuestion.answer}
 			</div>
 			{#if selectedQuestion.finalimg}
-				<img class="half-screen-img" src={selectedQuestion.imgSrc} alt="question" />
+				<img class="half-screen-img" src={selectedQuestion.finalimg} alt="question" />
 			{/if}
 		{/if}
 		{#if guess !== '' && !isCorrect}
