@@ -2,7 +2,7 @@ import type { PlayerData, Question } from '$lib/index';
 
 const playerData: PlayerData[] = [];
 const TIME_LEFT = 8; // seconds
-const sortQuestions = (questions: { points: number; question: string; answer: string; imgSrc?: string; }[]) => questions.sort((a, b) => a.points - b.points).map(q => ({ ...q, answered: false, buzzers: [] as string[] }));
+const sortQuestions = (questions: { points: number; question: string; answer: string; imgSrc?: string; finalimg?: string; }[]) => questions.sort((a, b) => a.points - b.points).map(q => ({ ...q, answered: false, buzzers: [] as string[] }));
 const pastQuestions: Question[] = sortQuestions([
     {
         points: 100,
@@ -12,18 +12,18 @@ const pastQuestions: Question[] = sortQuestions([
     {
         points: 200,
         question:
-            'Which sport has beam, bars, and floor events?',
+            'Which sport has beam, bars, vault, and floor events?',
         
         answer: 'Gymnastics',
-        //i did gymnastics growing up for 7 years
+        //I did gymnastics growing up for 7 years
     },
     {
         points: 300,
         question:
             'What is the only country flag with no blue, red, or white?',
-        answer: 'Jamaica',
-        imgSrc: "flag.jpeg",
-        //i am half jamaican
+            finalimg: 'flag.jpeg',
+            answer: 'Jamaica',
+        //I am half jamaican.
         //HOW TO MAKE IMAGE SHOW UP IN THE ANSWER SECTION OF THE QUESTION CARD?
     },
     {
@@ -31,7 +31,7 @@ const pastQuestions: Question[] = sortQuestions([
         question: 'This is a view from what national park in the United States?',
         imgSrc: 'half-dome-from-clouds-rest-500w.jpg',
         answer: 'Yosemite',
-        //i hiked clouds rest in yosemite this summer
+        //I hiked clouds rest in yosemite this summer
     }
 ]);
 
@@ -57,7 +57,7 @@ const presentQuestions: Question[] =
             question: 'This is a photo of what breed of dog?',
             imgSrc: 'IMG_4946.jpeg',
             answer: 'Poodle',
-            //i have the cutest dog inthe world and he is a poodle
+            //i have the cutest dog in the world and he is a poodle
         },
         {
             points: 300,
@@ -66,7 +66,7 @@ const presentQuestions: Question[] =
             imgSrc:
                 "janja-image.jpg",
             answer: 'Climbing',
-            //I do comp climbing a lot and Janja is a huge inspiration to me
+            //I do compatition climbing a lot and Janja is a huge inspiration to me
         }
     ]);
 const futureQuestions: Question[] = sortQuestions([

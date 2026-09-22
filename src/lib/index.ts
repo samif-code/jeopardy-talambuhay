@@ -4,6 +4,7 @@ export type Question = {
     answer: string;
     answered: boolean;
     imgSrc?: string;
+    finalimg?: string;
     buzzers: string[];
 };
 

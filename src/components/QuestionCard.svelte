@@ -76,7 +76,7 @@
 				console.log(`${playerName} buzzed in!`);
 				buzzed = true;
 				if (playerName === name) {
-					setTimer(5); // start timer only for the player who buzzed in
+					setTimer(8); // start timer only for the player who buzzed in
 				}
 			} else {
 				console.log('reset buzzer');
@@ -127,6 +127,7 @@
 		socket.emit('checkAnswer', {
 			answer: answer.trim(),
 			question: selectedQuestion,
+			picture: selectedQuestion.finalimg,
 			socketId: socket.id
 		});
 	}
@@ -135,6 +136,7 @@
 		// side effects, use this rune sparingly! like playing sounds.
 		if (isCorrect) {
 			new Audio('https://www.myinstants.com/media/sounds/rightanswer.mp3').play();
+
 		}
 	});
 </script>
@@ -185,6 +187,9 @@
 			<div class="answer">
 				Correct Answer: {selectedQuestion.answer}
 			</div>
+			{#if selectedQuestion.finalimg}
+				<img class="half-screen-img" src={selectedQuestion.imgSrc} alt="question" />
+			{/if}
 		{/if}
 		{#if guess !== '' && !isCorrect}
 			<p>{guess} is Incorrect!</p>
